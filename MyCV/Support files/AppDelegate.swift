@@ -8,6 +8,9 @@
 
 import UIKit
 
+// TODO:- replace with a model
+typealias Applicant = Int
+
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
 

@@ -15,9 +15,6 @@ class ProfileHeaderView: UIView, NibLoading {
 	@IBOutlet var phoneNumberTextView: UITextView?
 	@IBOutlet var emailAddressTextView: UITextView?
 	
-	// TODO:- replace with a model
-	typealias Applicant = Int
-	
 	var model: Applicant? {
 		didSet {
 			self.fill(with: model)

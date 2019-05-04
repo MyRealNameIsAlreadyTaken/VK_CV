@@ -18,6 +18,9 @@
 		8C3F1939227D94D50039A5C4 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1938227D94D50039A5C4 /* Operators.swift */; };
 		8C3F193B227D94EA0039A5C4 /* PrecedenceGourps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F193A227D94EA0039A5C4 /* PrecedenceGourps.swift */; };
 		8C3F193D227D952E0039A5C4 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F193C227D952E0039A5C4 /* UIViewExt.swift */; };
+		8C3F1945227D99DA0039A5C4 /* CVTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1944227D99DA0039A5C4 /* CVTableView.swift */; };
+		8C3F1947227D99E40039A5C4 /* CVTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C3F1946227D99E40039A5C4 /* CVTableView.xib */; };
+		8C3F1949227D9A5A0039A5C4 /* CVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1948227D9A5A0039A5C4 /* CVTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		8C3F1938227D94D50039A5C4 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		8C3F193A227D94EA0039A5C4 /* PrecedenceGourps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrecedenceGourps.swift; sourceTree = "<group>"; };
 		8C3F193C227D952E0039A5C4 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		8C3F1944227D99DA0039A5C4 /* CVTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVTableView.swift; sourceTree = "<group>"; };
+		8C3F1946227D99E40039A5C4 /* CVTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CVTableView.xib; sourceTree = "<group>"; };
+		8C3F1948227D9A5A0039A5C4 /* CVTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,9 @@
 				8C3F1921227D8B280039A5C4 /* LaunchScreen.storyboard */,
 				8C3F192A227D8BF80039A5C4 /* ProfileHeaderView.swift */,
 				8C3F1932227D916E0039A5C4 /* ProfileHeaderView.xib */,
+				8C3F1944227D99DA0039A5C4 /* CVTableView.swift */,
+				8C3F1946227D99E40039A5C4 /* CVTableView.xib */,
+				8C3F1948227D9A5A0039A5C4 /* CVTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C3F1923227D8B280039A5C4 /* LaunchScreen.storyboard in Resources */,
+				8C3F1947227D99E40039A5C4 /* CVTableView.xib in Resources */,
 				8C3F1920227D8B280039A5C4 /* Assets.xcassets in Resources */,
 				8C3F191E227D8B270039A5C4 /* Main.storyboard in Resources */,
 				8C3F1933227D916E0039A5C4 /* ProfileHeaderView.xib in Resources */,
@@ -202,6 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C3F1945227D99DA0039A5C4 /* CVTableView.swift in Sources */,
+				8C3F1949227D9A5A0039A5C4 /* CVTableViewCell.swift in Sources */,
 				8C3F193D227D952E0039A5C4 /* UIViewExt.swift in Sources */,
 				8C3F1935227D94220039A5C4 /* ProfileVC.swift in Sources */,
 				8C3F1939227D94D50039A5C4 /* Operators.swift in Sources */,
