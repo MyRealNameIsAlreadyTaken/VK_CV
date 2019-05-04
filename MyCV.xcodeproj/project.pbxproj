@@ -66,20 +66,68 @@
 		8C3F1917227D8B270039A5C4 /* MyCV */ = {
 			isa = PBXGroup;
 			children = (
-				8C3F1918227D8B270039A5C4 /* AppDelegate.swift */,
-				8C3F1938227D94D50039A5C4 /* Operators.swift */,
-				8C3F193A227D94EA0039A5C4 /* PrecedenceGourps.swift */,
-				8C3F193C227D952E0039A5C4 /* UIViewExt.swift */,
-				8C3F1934227D94220039A5C4 /* ProfileVC.swift */,
-				8C3F192A227D8BF80039A5C4 /* ProfileHeaderView.swift */,
-				8C3F1936227D94620039A5C4 /* NibLoading.swift */,
-				8C3F1932227D916E0039A5C4 /* ProfileHeaderView.xib */,
-				8C3F191C227D8B270039A5C4 /* Main.storyboard */,
-				8C3F191F227D8B280039A5C4 /* Assets.xcassets */,
-				8C3F1921227D8B280039A5C4 /* LaunchScreen.storyboard */,
-				8C3F1924227D8B280039A5C4 /* Info.plist */,
+				8C3F1940227D96CA0039A5C4 /* Controllers */,
+				8C3F193F227D96C20039A5C4 /* Views */,
+				8C3F1941227D96DE0039A5C4 /* Extensions */,
+				8C3F1942227D96EE0039A5C4 /* Protocols */,
+				8C3F193E227D96A80039A5C4 /* Operators */,
+				8C3F1943227D97120039A5C4 /* Support files */,
 			);
 			path = MyCV;
+			sourceTree = "<group>";
+		};
+		8C3F193E227D96A80039A5C4 /* Operators */ = {
+			isa = PBXGroup;
+			children = (
+				8C3F1938227D94D50039A5C4 /* Operators.swift */,
+				8C3F193A227D94EA0039A5C4 /* PrecedenceGourps.swift */,
+			);
+			path = Operators;
+			sourceTree = "<group>";
+		};
+		8C3F193F227D96C20039A5C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8C3F191C227D8B270039A5C4 /* Main.storyboard */,
+				8C3F1921227D8B280039A5C4 /* LaunchScreen.storyboard */,
+				8C3F192A227D8BF80039A5C4 /* ProfileHeaderView.swift */,
+				8C3F1932227D916E0039A5C4 /* ProfileHeaderView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8C3F1940227D96CA0039A5C4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8C3F1934227D94220039A5C4 /* ProfileVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8C3F1941227D96DE0039A5C4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8C3F193C227D952E0039A5C4 /* UIViewExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8C3F1942227D96EE0039A5C4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8C3F1936227D94620039A5C4 /* NibLoading.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8C3F1943227D97120039A5C4 /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				8C3F1918227D8B270039A5C4 /* AppDelegate.swift */,
+				8C3F191F227D8B280039A5C4 /* Assets.xcassets */,
+				8C3F1924227D8B280039A5C4 /* Info.plist */,
+			);
+			path = "Support files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,7 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X4E3DTF72B;
-				INFOPLIST_FILE = MyCV/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MyCV/Support files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,7 +374,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X4E3DTF72B;
-				INFOPLIST_FILE = MyCV/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MyCV/Support files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
