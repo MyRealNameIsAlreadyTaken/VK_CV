@@ -36,6 +36,11 @@
 		8C3F196E227DC0520039A5C4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F196D227DC0520039A5C4 /* Result.swift */; };
 		8C3F1970227DD1120039A5C4 /* DecodingKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F196F227DD1120039A5C4 /* DecodingKeys.swift */; };
 		8C3F1972227DD1C50039A5C4 /* KeyedDecodingContainerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1971227DD1C50039A5C4 /* KeyedDecodingContainerExt.swift */; };
+		8C3F197F227E10040039A5C4 /* ApplicantDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F197E227E10040039A5C4 /* ApplicantDelegate.swift */; };
+		8C3F1985227E15660039A5C4 /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1983227E15660039A5C4 /* CacheService.swift */; };
+		8C3F1986227E15660039A5C4 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1984227E15660039A5C4 /* CacheManager.swift */; };
+		8C3F1988227E2D260039A5C4 /* LocalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1987227E2D260039A5C4 /* LocalDataProvider.swift */; };
+		8C3F198A227E384F0039A5C4 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1989227E384F0039A5C4 /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +75,11 @@
 		8C3F196D227DC0520039A5C4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		8C3F196F227DD1120039A5C4 /* DecodingKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingKeys.swift; sourceTree = "<group>"; };
 		8C3F1971227DD1C50039A5C4 /* KeyedDecodingContainerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedDecodingContainerExt.swift; sourceTree = "<group>"; };
+		8C3F197E227E10040039A5C4 /* ApplicantDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantDelegate.swift; sourceTree = "<group>"; };
+		8C3F1983227E15660039A5C4 /* CacheService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
+		8C3F1984227E15660039A5C4 /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		8C3F1987227E2D260039A5C4 /* LocalDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataProvider.swift; sourceTree = "<group>"; };
+		8C3F1989227E384F0039A5C4 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				8C3F1936227D94620039A5C4 /* NibLoading.swift */,
+				8C3F197E227E10040039A5C4 /* ApplicantDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -187,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				8C3F1951227DAE770039A5C4 /* ImageLoadService.swift */,
+				8C3F1989227E384F0039A5C4 /* ImageLoader.swift */,
 				8C3F1953227DAEFC0039A5C4 /* ImageDownloader.swift */,
 			);
 			path = ImageLoadService;
@@ -209,6 +221,7 @@
 				8C3F196A227DBDC40039A5C4 /* NetworkService */,
 				8C3F1959227DB5850039A5C4 /* ImageLoadService */,
 				8C3F195A227DB6EC0039A5C4 /* ImageDownsampleService */,
+				8C3F1982227E15660039A5C4 /* CacheService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -217,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				8C3F195C227DB96F0039A5C4 /* DataProviderService.swift */,
+				8C3F1987227E2D260039A5C4 /* LocalDataProvider.swift */,
 				8C3F1961227DBB4D0039A5C4 /* NetworkDataProvider.swift */,
 			);
 			path = DataProviderService;
@@ -238,6 +252,15 @@
 				8C3F196B227DBDF40039A5C4 /* NetworkManager.swift */,
 			);
 			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		8C3F1982227E15660039A5C4 /* CacheService */ = {
+			isa = PBXGroup;
+			children = (
+				8C3F1983227E15660039A5C4 /* CacheService.swift */,
+				8C3F1984227E15660039A5C4 /* CacheManager.swift */,
+			);
+			path = CacheService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,15 +339,19 @@
 				8C3F1945227D99DA0039A5C4 /* CVTableView.swift in Sources */,
 				8C3F1949227D9A5A0039A5C4 /* CVTableViewCell.swift in Sources */,
 				8C3F1966227DBD050039A5C4 /* ApplicantAPI.swift in Sources */,
+				8C3F198A227E384F0039A5C4 /* ImageLoader.swift in Sources */,
 				8C3F196C227DBDF40039A5C4 /* NetworkManager.swift in Sources */,
+				8C3F197F227E10040039A5C4 /* ApplicantDelegate.swift in Sources */,
 				8C3F1958227DB20A0039A5C4 /* ImageDownsampler.swift in Sources */,
 				8C3F1954227DAEFC0039A5C4 /* ImageDownloader.swift in Sources */,
 				8C3F1952227DAE770039A5C4 /* ImageLoadService.swift in Sources */,
 				8C3F194E227DA1480039A5C4 /* Education.swift in Sources */,
+				8C3F1986227E15660039A5C4 /* CacheManager.swift in Sources */,
 				8C3F193D227D952E0039A5C4 /* UIViewExt.swift in Sources */,
 				8C3F1970227DD1120039A5C4 /* DecodingKeys.swift in Sources */,
 				8C3F1935227D94220039A5C4 /* ProfileVC.swift in Sources */,
 				8C3F196E227DC0520039A5C4 /* Result.swift in Sources */,
+				8C3F1988227E2D260039A5C4 /* LocalDataProvider.swift in Sources */,
 				8C3F1962227DBB4D0039A5C4 /* NetworkDataProvider.swift in Sources */,
 				8C3F1972227DD1C50039A5C4 /* KeyedDecodingContainerExt.swift in Sources */,
 				8C3F1969227DBDBD0039A5C4 /* NetworkService.swift in Sources */,
@@ -336,6 +363,7 @@
 				8C3F1937227D94620039A5C4 /* NibLoading.swift in Sources */,
 				8C3F194B227DA03B0039A5C4 /* Applicant.swift in Sources */,
 				8C3F1964227DBCDE0039A5C4 /* APIService.swift in Sources */,
+				8C3F1985227E15660039A5C4 /* CacheService.swift in Sources */,
 				8C3F1919227D8B270039A5C4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

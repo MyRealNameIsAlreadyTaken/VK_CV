@@ -10,32 +10,50 @@ import UIKit
 
 final class ProfileVC: UIViewController {
 
-	private let profileHeaderView = ProfileHeaderView.fromNib()
-	private let cvTableView = CVTableView.fromNib()
-	
-	private let applicantAPI = ApplicantAPI(networkService: NetworkManager(urlSession: URLSession(configuration: .ephemeral)))
-	private let imageDownsampler = ImageDownsampler()
-	
+	private let profileHeaderView: ProfileHeaderView?
+	private let cvTableView: CVTableView?
 	
 	private var dataProviderService: DataProviderService?
+	private let applicantAPI: APIService
 	private var imageLoadService: ImageLoadService?
+	private let imageDownsampleService: ImageDownsampleService
+	
+	private let cacheService: CacheService
+	
+	required init?(coder aDecoder: NSCoder) {
+		self.profileHeaderView = ProfileHeaderView.fromNib()
+		self.cvTableView = CVTableView.fromNib()
+		
+		self.applicantAPI = ApplicantAPI(networkService: NetworkManager(urlSession: URLSession(configuration: .ephemeral)))
+		self.imageDownsampleService = ImageDownsampler()
+		
+		self.cacheService = CacheManager()
+		
+		self.dataProviderService = self.cacheService.dataExists(for: ApplicantCacheKeys.applicant)
+			? LocalDataProvider(for: ApplicantCacheKeys.applicant)
+			: NetworkDataProvider(with: self.applicantAPI)
+		
+		self.imageLoadService = self.cacheService.dataExists(for: ApplicantCacheKeys.profileImage)
+			? ImageLoader(for: ApplicantCacheKeys.profileImage, imageDownsampleService: imageDownsampleService)
+			: ImageDownloader(imageDownsampleService: self.imageDownsampleService)
+		
+		super.init(coder: aDecoder)
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		self.initialConfiguration()
+		self.configureSubviews()
 		self.dataProviderService?.fetchData { result in
 			var applicant: Applicant? = result.decoded()
 			applicant?.imageLoadService = self.imageLoadService
+			applicant?.delegate = self
 			
 			self.profileHeaderView?.model = applicant
 			self.cvTableView?.model = applicant
+			
+			result.value.map { self.cacheService.save(data: $0, for: ApplicantCacheKeys.applicant) }
 		}
-	}
-	
-	private func initialConfiguration() {
-		self.configureSubviews()
-		self.configureDataProviders()
 	}
 	
 	private func configureSubviews() {
@@ -51,11 +69,11 @@ final class ProfileVC: UIViewController {
 		self.cvTableView?.topAnchor.constraint(equalTo: bottomAnchor).isActive = true
 		self.cvTableView?.constraint(top: false, to: self.view, constant: 16)
 	}
-	
-	private func configureDataProviders() {
-		
-		self.dataProviderService = NetworkDataProvider(with: self.applicantAPI)
-		self.imageLoadService = ImageDownloader(imageDownsampleService: imageDownsampler)
-	}
 }
 
+extension ProfileVC: ApplicantDelegate {
+	
+	func applicant(_ applicant: Applicant, didFinishLoading image: UIImage?) {
+		image?.pngData().map { self.cacheService.save(data: $0, for: ApplicantCacheKeys.profileImage) }
+	}
+}

@@ -11,5 +11,6 @@ import UIKit
 protocol ImageDownsampleService {
 	
 	func getImage(from url: URL) -> UIImage?
+	func getImage(from data: Data) -> UIImage?
 }
 

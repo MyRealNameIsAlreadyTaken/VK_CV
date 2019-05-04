@@ -18,6 +18,7 @@ struct Applicant {
 	}
 	
 	var imageLoadService: ImageLoadService?
+	var delegate: ApplicantDelegate?
 	
 	let fullName: String
 	let profileImageURL: URL
@@ -35,6 +36,7 @@ struct Applicant {
 	func loadProfileImage(completion: @escaping (UIImage?) -> Void) {
 		self.imageLoadService?.fetchImage(url: self.profileImageURL) { image in
 			completion(image)
+			self.delegate?.applicant(self, didFinishLoading: image)
 		}
 	}
 }

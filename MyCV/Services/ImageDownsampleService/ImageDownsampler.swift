@@ -10,14 +10,23 @@ import UIKit
 
 class ImageDownsampler: ImageDownsampleService {
 	
+	private let options: [CFString: Any] = [kCGImageSourceThumbnailMaxPixelSize: 300,
+											kCGImageSourceCreateThumbnailFromImageAlways: true]
 	func getImage(from url: URL) -> UIImage? {
-		let options: [CFString: Any] = [kCGImageSourceThumbnailMaxPixelSize: 300,
-										kCGImageSourceCreateThumbnailFromImageAlways: true]
+		let imageSource = CGImageSourceCreateWithURL(url as CFURL, nil)
 		
-		let scaledImage = CGImageSourceCreateWithURL(url as CFURL, nil)
-			.flatMap { CGImageSourceCreateThumbnailAtIndex($0, 0, options as CFDictionary) }
+		return self.imageFrom(imageSource)
+	}
+	
+	func getImage(from data: Data) -> UIImage? {
+		let imageSource = CGImageSourceCreateWithData(data as CFData, nil)
+		
+		return self.imageFrom(imageSource)
+	}
+	
+	private func imageFrom(_ imageSource: CGImageSource?) -> UIImage? {
+		return imageSource
+			.flatMap { CGImageSourceCreateThumbnailAtIndex($0, 0, self.options as CFDictionary) }
 			.map { UIImage(cgImage: $0) }
-		
-		return scaledImage
 	}
 }

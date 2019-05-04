@@ -19,7 +19,6 @@ class NetworkManager: NetworkService {
 	func data(at url: URL, completion: @escaping (Result<Data, FetchError>) -> Void) {
 		let task = self.urlSession.dataTask(with: url) { (data, _, error) in
 			DispatchQueue.global(qos: .background).async {
-				
 				completion § Result(
 					value: data,
 					error: error.map { _ in .failed },

@@ -14,11 +14,21 @@ func >>= <T, U>(value: T?, f: (T) -> U?) -> U? {
 }
 
 infix operator |>: LeftFunctionApplicationPrecedence
-public func |> <T, U>(value: T, f: (T) -> U) -> U {
+func |> <T, U>(value: T, f: (T) -> U) -> U {
 	return f § value
 }
 
 infix operator §: RightFunctionApplicationPrecedence
-public func § <T, U>(f: (T) -> U, value: T) -> U {
+func § <T, U>(f: (T) -> U, value: T) -> U {
 	return f(value)
+}
+
+infix operator <*>: LeftFunctionApplicationPrecedence
+func <*> <T, U>(f: ((T) -> U)?, value: T?) -> U? {
+	return f.flatMap { f in value.map { f($0) } }
+}
+
+infix operator <§>: LeftFunctionApplicationPrecedence
+func <§> <T, U>(f: (T) -> U, value: T?) -> U? {
+	return value.map(f)
 }
