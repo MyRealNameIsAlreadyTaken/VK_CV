@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+	<device id="retina4_7" orientation="portrait">
+		<adaptation id="fullscreen"/>
+	</device>
+	<dependencies>
+		<deployment identifier="iOS"/>
+		<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+		<capability name="Safe area layout guides" minToolsVersion="9.0"/>
+		<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+	</dependencies>
+	<objects>
+		<placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+		<placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+		<view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProfileHeaderView" customModule="Civi" customModuleProvider="target">
+			<rect key="frame" x="0.0" y="0.0" width="374" height="132"/>
+			<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+			<subviews>
+				<imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2xg-6t-2fA">
+					<rect key="frame" x="16" y="31" width="70" height="70"/>
+					<constraints>
+						<constraint firstAttribute="width" constant="70" id="8is-aU-rjV"/>
+						<constraint firstAttribute="height" constant="70" id="Jej-JY-QXe"/>
+					</constraints>
+				</imageView>
+				<stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="BTm-dG-zMM">
+					<rect key="frame" x="94" y="21.5" width="73.5" height="89"/>
+					<subviews>
+						<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leD-X1-FD6">
+							<rect key="frame" x="0.0" y="0.0" width="44.5" height="21"/>
+							<fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+							<color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+							<nil key="highlightedColor"/>
+						</label>
+						<stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="rTz-TZ-NUa">
+							<rect key="frame" x="0.0" y="27" width="73.5" height="62"/>
+							<subviews>
+								<textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Placeholder" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5A9-qv-zoM">
+									<rect key="frame" x="0.0" y="0.0" width="73.5" height="30"/>
+									<color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+									<fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+									<textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+									<dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
+								</textView>
+								<textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Placeholder" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oc2-RE-57a">
+									<rect key="frame" x="0.0" y="32" width="73.5" height="30"/>
+									<color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+									<fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+									<textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+									<dataDetectorType key="dataDetectorTypes" link="YES"/>
+								</textView>
+							</subviews>
+						</stackView>
+					</subviews>
+				</stackView>
+			</subviews>
+			<color key="backgroundColor" red="0.92156862745098034" green="0.32156862745098036" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+			<constraints>
+				<constraint firstItem="BTm-dG-zMM" firstAttribute="leading" secondItem="2xg-6t-2fA" secondAttribute="trailing" constant="8" id="FAE-bR-O6K"/>
+				<constraint firstItem="BTm-dG-zMM" firstAttribute="centerY" secondItem="2xg-6t-2fA" secondAttribute="centerY" id="Qy9-E1-rJN"/>
+				<constraint firstItem="2xg-6t-2fA" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="31" id="WA7-ly-Ytu"/>
+				<constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="2xg-6t-2fA" secondAttribute="bottom" constant="31" id="Zgs-bI-1Yi"/>
+				<constraint firstItem="2xg-6t-2fA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gYP-09-65f"/>
+				<constraint firstItem="2xg-6t-2fA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="tTC-sa-sDb"/>
+			</constraints>
+			<freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+			<viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+			<connections>
+				<outlet property="emailAddressTextView" destination="oc2-RE-57a" id="UqW-BJ-oeH"/>
+				<outlet property="fullNameLabel" destination="leD-X1-FD6" id="e4j-tm-gQZ"/>
+				<outlet property="phoneNumberTextView" destination="5A9-qv-zoM" id="uaZ-VZ-cnr"/>
+				<outlet property="profileImageView" destination="2xg-6t-2fA" id="C2H-Ra-j87"/>
+			</connections>
+			<point key="canvasLocation" x="137.59999999999999" y="358.92053973013498"/>
+		</view>
+	</objects>
+</document>
