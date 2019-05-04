@@ -32,3 +32,16 @@ enum Result<Value, Error: Swift.Error> {
 		}
 	}
 }
+
+extension Result where Value == Data {
+	
+	func decoded<T: Decodable>(with decoder: JSONDecoder = .init()) -> T? {
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateFormat = "yyyy-MM-dd"
+		
+		decoder.dateDecodingStrategy = .formatted(dateFormatter)
+		
+		guard let data = self.value else { return nil }
+		return try? decoder.decode(T.self, from: data)
+	}
+}

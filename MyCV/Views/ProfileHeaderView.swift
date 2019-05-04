@@ -37,5 +37,11 @@ class ProfileHeaderView: UIView, NibLoading {
 				self.profileImageView?.image = image
 			}
 		}
+		
+		DispatchQueue.main.async {
+			self.fullNameLabel?.text = model?.fullName
+			self.phoneNumberTextView?.text = model?.phoneNumber
+			self.emailAddressTextView?.text = model?.emailAddress
+		}
 	}
 }

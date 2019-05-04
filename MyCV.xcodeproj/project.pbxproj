@@ -34,6 +34,8 @@
 		8C3F1969227DBDBD0039A5C4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1968227DBDBD0039A5C4 /* NetworkService.swift */; };
 		8C3F196C227DBDF40039A5C4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F196B227DBDF40039A5C4 /* NetworkManager.swift */; };
 		8C3F196E227DC0520039A5C4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F196D227DC0520039A5C4 /* Result.swift */; };
+		8C3F1970227DD1120039A5C4 /* DecodingKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F196F227DD1120039A5C4 /* DecodingKeys.swift */; };
+		8C3F1972227DD1C50039A5C4 /* KeyedDecodingContainerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1971227DD1C50039A5C4 /* KeyedDecodingContainerExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		8C3F1968227DBDBD0039A5C4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		8C3F196B227DBDF40039A5C4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8C3F196D227DC0520039A5C4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		8C3F196F227DD1120039A5C4 /* DecodingKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingKeys.swift; sourceTree = "<group>"; };
+		8C3F1971227DD1C50039A5C4 /* KeyedDecodingContainerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedDecodingContainerExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				8C3F193C227D952E0039A5C4 /* UIViewExt.swift */,
+				8C3F1971227DD1C50039A5C4 /* KeyedDecodingContainerExt.swift */,
 				8C3F196D227DC0520039A5C4 /* Result.swift */,
 			);
 			path = "Extensions+types";
@@ -173,6 +178,7 @@
 			children = (
 				8C3F194A227DA03B0039A5C4 /* Applicant.swift */,
 				8C3F194D227DA1480039A5C4 /* Education.swift */,
+				8C3F196F227DD1120039A5C4 /* DecodingKeys.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,9 +322,11 @@
 				8C3F1952227DAE770039A5C4 /* ImageLoadService.swift in Sources */,
 				8C3F194E227DA1480039A5C4 /* Education.swift in Sources */,
 				8C3F193D227D952E0039A5C4 /* UIViewExt.swift in Sources */,
+				8C3F1970227DD1120039A5C4 /* DecodingKeys.swift in Sources */,
 				8C3F1935227D94220039A5C4 /* ProfileVC.swift in Sources */,
 				8C3F196E227DC0520039A5C4 /* Result.swift in Sources */,
 				8C3F1962227DBB4D0039A5C4 /* NetworkDataProvider.swift in Sources */,
+				8C3F1972227DD1C50039A5C4 /* KeyedDecodingContainerExt.swift in Sources */,
 				8C3F1969227DBDBD0039A5C4 /* NetworkService.swift in Sources */,
 				8C3F1939227D94D50039A5C4 /* Operators.swift in Sources */,
 				8C3F1956227DAF910039A5C4 /* ImageDownsampleService.swift in Sources */,
