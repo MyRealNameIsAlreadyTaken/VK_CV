@@ -21,6 +21,8 @@
 		8C3F1945227D99DA0039A5C4 /* CVTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1944227D99DA0039A5C4 /* CVTableView.swift */; };
 		8C3F1947227D99E40039A5C4 /* CVTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C3F1946227D99E40039A5C4 /* CVTableView.xib */; };
 		8C3F1949227D9A5A0039A5C4 /* CVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1948227D9A5A0039A5C4 /* CVTableViewCell.swift */; };
+		8C3F194B227DA03B0039A5C4 /* Applicant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F194A227DA03B0039A5C4 /* Applicant.swift */; };
+		8C3F194E227DA1480039A5C4 /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F194D227DA1480039A5C4 /* Education.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		8C3F1944227D99DA0039A5C4 /* CVTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVTableView.swift; sourceTree = "<group>"; };
 		8C3F1946227D99E40039A5C4 /* CVTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CVTableView.xib; sourceTree = "<group>"; };
 		8C3F1948227D9A5A0039A5C4 /* CVTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVTableViewCell.swift; sourceTree = "<group>"; };
+		8C3F194A227DA03B0039A5C4 /* Applicant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applicant.swift; sourceTree = "<group>"; };
+		8C3F194D227DA1480039A5C4 /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				8C3F1940227D96CA0039A5C4 /* Controllers */,
+				8C3F194C227DA0400039A5C4 /* Models */,
 				8C3F193F227D96C20039A5C4 /* Views */,
 				8C3F1941227D96DE0039A5C4 /* Extensions */,
 				8C3F1942227D96EE0039A5C4 /* Protocols */,
@@ -137,6 +142,15 @@
 				8C3F1924227D8B280039A5C4 /* Info.plist */,
 			);
 			path = "Support files";
+			sourceTree = "<group>";
+		};
+		8C3F194C227DA0400039A5C4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8C3F194A227DA03B0039A5C4 /* Applicant.swift */,
+				8C3F194D227DA1480039A5C4 /* Education.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,12 +228,14 @@
 			files = (
 				8C3F1945227D99DA0039A5C4 /* CVTableView.swift in Sources */,
 				8C3F1949227D9A5A0039A5C4 /* CVTableViewCell.swift in Sources */,
+				8C3F194E227DA1480039A5C4 /* Education.swift in Sources */,
 				8C3F193D227D952E0039A5C4 /* UIViewExt.swift in Sources */,
 				8C3F1935227D94220039A5C4 /* ProfileVC.swift in Sources */,
 				8C3F1939227D94D50039A5C4 /* Operators.swift in Sources */,
 				8C3F192B227D8BF80039A5C4 /* ProfileHeaderView.swift in Sources */,
 				8C3F193B227D94EA0039A5C4 /* PrecedenceGourps.swift in Sources */,
 				8C3F1937227D94620039A5C4 /* NibLoading.swift in Sources */,
+				8C3F194B227DA03B0039A5C4 /* Applicant.swift in Sources */,
 				8C3F1919227D8B270039A5C4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
