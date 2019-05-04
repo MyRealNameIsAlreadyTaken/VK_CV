@@ -12,3 +12,8 @@ infix operator >>=: LeftBindPrecedence
 func >>= <T, U>(value: T?, f: (T) -> U?) -> U? {
 	return value.flatMap(f)
 }
+
+infix operator |>: LeftFunctionApplicationPrecedence
+func |> <T, U>(value: T, f: (T) -> U) -> U {
+	return f(value)
+}

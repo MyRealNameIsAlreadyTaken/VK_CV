@@ -8,8 +8,6 @@
 
 import UIKit
 
-typealias ImageLoadService = Int
-
 struct Applicant {
 	
 	enum Degree: String {
@@ -33,6 +31,8 @@ struct Applicant {
 	let aboutInfo: [String]
 	
 	func loadProfileImage(completion: @escaping (UIImage?) -> Void) {
-		// TODO:- Add implementation
+		self.imageLoadService?.fetchImage(url: self.profileImageURL) { image in
+			completion(image)
+		}
 	}
 }

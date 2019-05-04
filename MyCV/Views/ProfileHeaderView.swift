@@ -32,6 +32,10 @@ class ProfileHeaderView: UIView, NibLoading {
 	}
 	
 	private func fill(with model: Applicant?) {
-		// TODO:- Add implementation
+		model?.loadProfileImage { image in
+			DispatchQueue.main.async {
+				self.profileImageView?.image = image
+			}
+		}
 	}
 }

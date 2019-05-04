@@ -12,3 +12,8 @@ precedencegroup LeftBindPrecedence {
 	associativity: left
 	higherThan: AssignmentPrecedence
 }
+
+precedencegroup LeftFunctionApplicationPrecedence {
+	associativity: left
+	higherThan: AssignmentPrecedence
+}
