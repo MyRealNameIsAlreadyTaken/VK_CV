@@ -13,10 +13,18 @@ final class ProfileVC: UIViewController {
 	private let profileHeaderView = ProfileHeaderView.fromNib()
 	private let cvTableView = CVTableView.fromNib()
 	
+	private let applicantAPI = ApplicantAPI(networkService: NetworkManager(urlSession: URLSession(configuration: .ephemeral)))
+	
+	private var dataProviderService: DataProviderService?
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		self.dataProviderService = NetworkDataProvider(with: self.applicantAPI)
 		self.configureSubviews()
+		self.dataProviderService?.fetchData { result in
+			// TODO:- Add implementation
+		}
 	}
 	
 	private func configureSubviews() {

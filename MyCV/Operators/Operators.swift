@@ -14,6 +14,11 @@ func >>= <T, U>(value: T?, f: (T) -> U?) -> U? {
 }
 
 infix operator |>: LeftFunctionApplicationPrecedence
-func |> <T, U>(value: T, f: (T) -> U) -> U {
+public func |> <T, U>(value: T, f: (T) -> U) -> U {
+	return f § value
+}
+
+infix operator §: RightFunctionApplicationPrecedence
+public func § <T, U>(f: (T) -> U, value: T) -> U {
 	return f(value)
 }

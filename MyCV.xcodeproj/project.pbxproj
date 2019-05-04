@@ -27,6 +27,13 @@
 		8C3F1954227DAEFC0039A5C4 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1953227DAEFC0039A5C4 /* ImageDownloader.swift */; };
 		8C3F1956227DAF910039A5C4 /* ImageDownsampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1955227DAF910039A5C4 /* ImageDownsampleService.swift */; };
 		8C3F1958227DB20A0039A5C4 /* ImageDownsampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1957227DB20A0039A5C4 /* ImageDownsampler.swift */; };
+		8C3F195D227DB96F0039A5C4 /* DataProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F195C227DB96F0039A5C4 /* DataProviderService.swift */; };
+		8C3F1962227DBB4D0039A5C4 /* NetworkDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1961227DBB4D0039A5C4 /* NetworkDataProvider.swift */; };
+		8C3F1964227DBCDE0039A5C4 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1963227DBCDE0039A5C4 /* APIService.swift */; };
+		8C3F1966227DBD050039A5C4 /* ApplicantAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1965227DBD050039A5C4 /* ApplicantAPI.swift */; };
+		8C3F1969227DBDBD0039A5C4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1968227DBDBD0039A5C4 /* NetworkService.swift */; };
+		8C3F196C227DBDF40039A5C4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F196B227DBDF40039A5C4 /* NetworkManager.swift */; };
+		8C3F196E227DC0520039A5C4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F196D227DC0520039A5C4 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +59,13 @@
 		8C3F1953227DAEFC0039A5C4 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		8C3F1955227DAF910039A5C4 /* ImageDownsampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownsampleService.swift; sourceTree = "<group>"; };
 		8C3F1957227DB20A0039A5C4 /* ImageDownsampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownsampler.swift; sourceTree = "<group>"; };
+		8C3F195C227DB96F0039A5C4 /* DataProviderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderService.swift; sourceTree = "<group>"; };
+		8C3F1961227DBB4D0039A5C4 /* NetworkDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataProvider.swift; sourceTree = "<group>"; };
+		8C3F1963227DBCDE0039A5C4 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		8C3F1965227DBD050039A5C4 /* ApplicantAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantAPI.swift; sourceTree = "<group>"; };
+		8C3F1968227DBDBD0039A5C4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		8C3F196B227DBDF40039A5C4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8C3F196D227DC0520039A5C4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				8C3F193C227D952E0039A5C4 /* UIViewExt.swift */,
+				8C3F196D227DC0520039A5C4 /* Result.swift */,
 			);
 			path = "Extensions+types";
 			sourceTree = "<group>";
@@ -183,10 +198,40 @@
 		8C3F195B227DB6FF0039A5C4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8C3F195E227DB9800039A5C4 /* DataProviderService */,
+				8C3F1967227DBD6A0039A5C4 /* APIService */,
+				8C3F196A227DBDC40039A5C4 /* NetworkService */,
 				8C3F1959227DB5850039A5C4 /* ImageLoadService */,
 				8C3F195A227DB6EC0039A5C4 /* ImageDownsampleService */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		8C3F195E227DB9800039A5C4 /* DataProviderService */ = {
+			isa = PBXGroup;
+			children = (
+				8C3F195C227DB96F0039A5C4 /* DataProviderService.swift */,
+				8C3F1961227DBB4D0039A5C4 /* NetworkDataProvider.swift */,
+			);
+			path = DataProviderService;
+			sourceTree = "<group>";
+		};
+		8C3F1967227DBD6A0039A5C4 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				8C3F1963227DBCDE0039A5C4 /* APIService.swift */,
+				8C3F1965227DBD050039A5C4 /* ApplicantAPI.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		8C3F196A227DBDC40039A5C4 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				8C3F1968227DBDBD0039A5C4 /* NetworkService.swift */,
+				8C3F196B227DBDF40039A5C4 /* NetworkManager.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,18 +309,25 @@
 			files = (
 				8C3F1945227D99DA0039A5C4 /* CVTableView.swift in Sources */,
 				8C3F1949227D9A5A0039A5C4 /* CVTableViewCell.swift in Sources */,
+				8C3F1966227DBD050039A5C4 /* ApplicantAPI.swift in Sources */,
+				8C3F196C227DBDF40039A5C4 /* NetworkManager.swift in Sources */,
 				8C3F1958227DB20A0039A5C4 /* ImageDownsampler.swift in Sources */,
 				8C3F1954227DAEFC0039A5C4 /* ImageDownloader.swift in Sources */,
 				8C3F1952227DAE770039A5C4 /* ImageLoadService.swift in Sources */,
 				8C3F194E227DA1480039A5C4 /* Education.swift in Sources */,
 				8C3F193D227D952E0039A5C4 /* UIViewExt.swift in Sources */,
 				8C3F1935227D94220039A5C4 /* ProfileVC.swift in Sources */,
+				8C3F196E227DC0520039A5C4 /* Result.swift in Sources */,
+				8C3F1962227DBB4D0039A5C4 /* NetworkDataProvider.swift in Sources */,
+				8C3F1969227DBDBD0039A5C4 /* NetworkService.swift in Sources */,
 				8C3F1939227D94D50039A5C4 /* Operators.swift in Sources */,
 				8C3F1956227DAF910039A5C4 /* ImageDownsampleService.swift in Sources */,
+				8C3F195D227DB96F0039A5C4 /* DataProviderService.swift in Sources */,
 				8C3F192B227D8BF80039A5C4 /* ProfileHeaderView.swift in Sources */,
 				8C3F193B227D94EA0039A5C4 /* PrecedenceGourps.swift in Sources */,
 				8C3F1937227D94620039A5C4 /* NibLoading.swift in Sources */,
 				8C3F194B227DA03B0039A5C4 /* Applicant.swift in Sources */,
+				8C3F1964227DBCDE0039A5C4 /* APIService.swift in Sources */,
 				8C3F1919227D8B270039A5C4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

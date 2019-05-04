@@ -17,6 +17,6 @@ class ImageDownloader: ImageLoadService {
 	}
 	
 	func fetchImage(url: URL, completion: @escaping (UIImage?) -> Void) {
-		url |> self.imageDownsampleService.getImage |> completion
+		completion § self.imageDownsampleService.getImage § url
 	}
 }
