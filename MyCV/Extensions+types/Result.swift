@@ -41,7 +41,7 @@ extension Result where Value == Data {
 		
 		decoder.dateDecodingStrategy = .formatted(dateFormatter)
 		
-		guard let data = self.value else { return nil }
-		return try? decoder.decode(T.self, from: data)
+		let data = self.value
+		return data.flatMap { try? decoder.decode(from: $0) }
 	}
 }

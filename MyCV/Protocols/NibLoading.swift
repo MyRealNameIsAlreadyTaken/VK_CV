@@ -16,12 +16,9 @@ protocol NibLoading {
 extension NibLoading {
 	
 	static func fromNib() -> Self? {
-		guard let view = UINib(nibName: String(describing: self), bundle: nil)
+		let view = UINib(nibName: String(describing: self), bundle: nil)
 			.instantiate(withOwner: nil)
-			.first as? Self else {
-				assertionFailure("Nib not found")
-				return nil
-		}
+			.first as? Self
 		
 		return view
 	}

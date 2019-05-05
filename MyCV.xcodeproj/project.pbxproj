@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C3822B1227EBAD800BFBE61 /* DictionaryExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3822B0227EBAD800BFBE61 /* DictionaryExt.swift */; };
+		8C3822B3227ECE0D00BFBE61 /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3822B2227ECE0D00BFBE61 /* JSONDecoder.swift */; };
 		8C3F1919227D8B270039A5C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3F1918227D8B270039A5C4 /* AppDelegate.swift */; };
 		8C3F191E227D8B270039A5C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C3F191C227D8B270039A5C4 /* Main.storyboard */; };
 		8C3F1920227D8B280039A5C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C3F191F227D8B280039A5C4 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C3822B0227EBAD800BFBE61 /* DictionaryExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExt.swift; sourceTree = "<group>"; };
+		8C3822B2227ECE0D00BFBE61 /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
 		8C3F1915227D8B270039A5C4 /* MyCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C3F1918227D8B270039A5C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C3F191D227D8B270039A5C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -159,7 +163,9 @@
 			isa = PBXGroup;
 			children = (
 				8C3F193C227D952E0039A5C4 /* UIViewExt.swift */,
+				8C3822B0227EBAD800BFBE61 /* DictionaryExt.swift */,
 				8C3F1971227DD1C50039A5C4 /* KeyedDecodingContainerExt.swift */,
+				8C3822B2227ECE0D00BFBE61 /* JSONDecoder.swift */,
 				8C3F196D227DC0520039A5C4 /* Result.swift */,
 			);
 			path = "Extensions+types";
@@ -341,6 +347,7 @@
 				8C3F1966227DBD050039A5C4 /* ApplicantAPI.swift in Sources */,
 				8C3F198A227E384F0039A5C4 /* ImageLoader.swift in Sources */,
 				8C3F196C227DBDF40039A5C4 /* NetworkManager.swift in Sources */,
+				8C3822B1227EBAD800BFBE61 /* DictionaryExt.swift in Sources */,
 				8C3F197F227E10040039A5C4 /* ApplicantDelegate.swift in Sources */,
 				8C3F1958227DB20A0039A5C4 /* ImageDownsampler.swift in Sources */,
 				8C3F1954227DAEFC0039A5C4 /* ImageDownloader.swift in Sources */,
@@ -362,6 +369,7 @@
 				8C3F193B227D94EA0039A5C4 /* PrecedenceGourps.swift in Sources */,
 				8C3F1937227D94620039A5C4 /* NibLoading.swift in Sources */,
 				8C3F194B227DA03B0039A5C4 /* Applicant.swift in Sources */,
+				8C3822B3227ECE0D00BFBE61 /* JSONDecoder.swift in Sources */,
 				8C3F1964227DBCDE0039A5C4 /* APIService.swift in Sources */,
 				8C3F1985227E15660039A5C4 /* CacheService.swift in Sources */,
 				8C3F1919227D8B270039A5C4 /* AppDelegate.swift in Sources */,

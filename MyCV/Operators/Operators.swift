@@ -32,3 +32,14 @@ infix operator <§>: LeftFunctionApplicationPrecedence
 func <§> <T, U>(f: (T) -> U, value: T?) -> U? {
 	return value.map(f)
 }
+
+func + (lhs: NSAttributedString, rhs: NSAttributedString) -> NSAttributedString {
+	let result = NSMutableAttributedString(attributedString: lhs)
+	result.append(rhs)
+	
+	return result
+}
+
+func + <T: Numeric>(lhs: T?, rhs: T) -> T? {
+	return lhs.map { $0 + rhs }
+}

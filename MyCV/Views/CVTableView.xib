@@ -161,26 +161,27 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgx-w5-xSb">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l3b-x7-9fO">
                         <rect key="frame" x="8" y="36" width="359" height="131.5"/>
                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                    </textView>
                 </subviews>
                 <color key="backgroundColor" red="0.7843137255" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="tgx-w5-xSb" firstAttribute="leading" secondItem="sl2-01-oA5" secondAttribute="leading" constant="8" id="4MF-A5-qcT"/>
-                    <constraint firstAttribute="trailing" secondItem="tgx-w5-xSb" secondAttribute="trailing" constant="8" id="9At-4d-SYl"/>
-                    <constraint firstAttribute="bottom" secondItem="tgx-w5-xSb" secondAttribute="bottom" constant="8" id="E7G-Ap-ZTf"/>
                     <constraint firstItem="lzr-as-zPK" firstAttribute="leading" secondItem="sl2-01-oA5" secondAttribute="leading" constant="8" id="Hks-f3-wtJ"/>
-                    <constraint firstItem="tgx-w5-xSb" firstAttribute="top" secondItem="lzr-as-zPK" secondAttribute="bottom" constant="8" id="UF5-V3-gS6"/>
                     <constraint firstAttribute="trailing" secondItem="lzr-as-zPK" secondAttribute="trailing" constant="8" id="ZBe-tk-esV"/>
+                    <constraint firstAttribute="trailing" secondItem="l3b-x7-9fO" secondAttribute="trailing" constant="8" id="dap-ar-Mzg"/>
+                    <constraint firstItem="l3b-x7-9fO" firstAttribute="top" secondItem="lzr-as-zPK" secondAttribute="bottom" constant="8" id="fs9-Ax-7uy"/>
+                    <constraint firstAttribute="bottom" secondItem="l3b-x7-9fO" secondAttribute="bottom" priority="900" constant="8" id="imc-6D-qIe"/>
                     <constraint firstItem="lzr-as-zPK" firstAttribute="top" secondItem="sl2-01-oA5" secondAttribute="top" constant="8" id="pvw-ky-bkH"/>
+                    <constraint firstItem="l3b-x7-9fO" firstAttribute="leading" secondItem="sl2-01-oA5" secondAttribute="leading" constant="8" id="zWN-Dv-zOm"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="headerLabel" destination="lzr-as-zPK" id="jmu-W4-HLm"/>
+                <outlet property="workSamplesTextView" destination="l3b-x7-9fO" id="0jg-rn-m70"/>
             </connections>
             <point key="canvasLocation" x="853.60000000000002" y="508.24587706146929"/>
         </tableViewCell>
