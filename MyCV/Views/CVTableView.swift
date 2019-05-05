@@ -57,8 +57,18 @@ extension CVTableView: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let section = indexPath.section
+		let cell = self.cells[section]
 		
-		return self.cells[section] ?? UITableViewCell()
+		let headerFont = UIFont(name: "GillSans-Bold", size: 17)
+		let headerFontMetrics = UIFontMetrics(forTextStyle: .title2)
+		let bodyFont = UIFont(name: "GillSans", size: 17)
+		let bodyFontMetrics = UIFontMetrics(forTextStyle: .body)
+		
+		headerFont.map { cell?.headerLabel?.font = headerFontMetrics.scaledFont(for: $0) }
+		bodyFont.map { cell?.bodyLabel?.font = bodyFontMetrics.scaledFont(for: $0) }
+		bodyFont.map { cell?.workSamplesTextView?.font = bodyFontMetrics.scaledFont(for: $0) }
+		
+		return cell ?? UITableViewCell()
 	}
 }
 

@@ -10,7 +10,9 @@ import UIKit
 
 class ProfileHeaderView: UIView, NibLoading {
 
+	@IBOutlet var containerView: UIView?
 	@IBOutlet var profileImageView: UIImageView?
+	@IBOutlet var activityIndicator: UIActivityIndicatorView?
 	@IBOutlet var fullNameLabel: UILabel?
 	@IBOutlet var phoneNumberTextView: UITextView?
 	@IBOutlet var emailAddressTextView: UITextView?
@@ -18,6 +20,9 @@ class ProfileHeaderView: UIView, NibLoading {
 	var model: Applicant? {
 		didSet {
 			self.fill(with: model)
+			DispatchQueue.main.async {
+				self.activityIndicator?.stopAnimating()
+			}
 		}
 	}
 	
@@ -28,7 +33,15 @@ class ProfileHeaderView: UIView, NibLoading {
 		
 		let imageViewWidth = self.profileImageView?.bounds.width
 		imageViewWidth.map { self.profileImageView?.layer.cornerRadius = $0 / 2 }
-		self.layer.cornerRadius = 12
+		
+		self.containerView?.layer.cornerRadius = 12
+		self.profileImageView?.layer.borderWidth = 1.5
+		self.profileImageView?.layer.borderColor = UIColor.black.cgColor
+		
+		let headerFont = UIFont(name: "GillSans", size: 20)
+		let headerFontMetrics = UIFontMetrics(forTextStyle: .title2)
+		
+		headerFont.map { self.fullNameLabel?.font = headerFontMetrics.scaledFont(for: $0) }
 	}
 	
 	private func fill(with model: Applicant?) {

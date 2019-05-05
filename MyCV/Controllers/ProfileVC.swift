@@ -63,7 +63,7 @@ final class ProfileVC: UIViewController {
 		}
 		
 		self.profileHeaderView?.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 25).isActive = true
-		self.profileHeaderView?.constraint(top: false, bottom: false, to: self.view, constant: 8)
+		self.profileHeaderView?.constraint(top: false, bottom: false, to: self.view, constant: 16)
 		
 		let bottomAnchor = self.profileHeaderView?.bottomAnchor
 		bottomAnchor.map { self.cvTableView?.topAnchor.constraint(equalTo: $0).isActive = true }

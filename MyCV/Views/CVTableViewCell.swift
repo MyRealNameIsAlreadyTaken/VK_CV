@@ -10,6 +10,8 @@ import UIKit
 
 class CVTableViewCell: UITableViewCell, NibLoading {
 	
+	@IBOutlet var containerView: UIView?
+	@IBOutlet var paragraphView: UIView?
 	@IBOutlet var headerLabel: UILabel?
 	@IBOutlet var bodyLabel: UILabel?
 	@IBOutlet var workSamplesTextView: UITextView?
@@ -20,21 +22,25 @@ class CVTableViewCell: UITableViewCell, NibLoading {
 		}
 	}
 	
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		
+		let paragraphViewWidth = self.paragraphView?.bounds.width
+		paragraphViewWidth.map { self.paragraphView?.layer.cornerRadius = $0 / 2 }
+		
+		self.containerView?.layer.cornerRadius = 8
+	}
+	
 	private func fill(with model: Applicant?) {
 		DispatchQueue.main.async {
 			self.headerLabel?.text = self.reuseIdentifier?.uppercased()
 			self.bodyLabel?.text = self.getBodyLabelText(for: self.reuseIdentifier)
 			self.workSamplesTextView?.attributedText = self.model?.workSamples.toAttributedString()
-			
-			let height = self.workSamplesTextView?.contentSize.height + 15
-			self.workSamplesTextView?.isScrollEnabled = false
-			let makeWSHeighConstraint = self.workSamplesTextView?.heightAnchor.constraint(equalToConstant:)
-			(makeWSHeighConstraint <*> height)?.isActive = true
 		}
 	}
 	
 	private func getBodyLabelText(for reuseIdentifier: String?) -> String? {
-		let addParagraphDot = {  "• " + $0 }
+		let addParagraphDot = { "• " + $0 }
 		
 		var output: [String]?
 		switch reuseIdentifier {
@@ -62,6 +68,6 @@ class CVTableViewCell: UITableViewCell, NibLoading {
 			return nil
 		}
 		
-		return (output?.joined(separator: "\n• ")).map(addParagraphDot)
+		return addParagraphDot <§> output?.joined(separator: "\n• ")
 	}
 }
