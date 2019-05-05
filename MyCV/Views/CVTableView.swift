@@ -16,6 +16,7 @@ class CVTableView: UIView, NibLoading {
 	@IBOutlet var technologiesCell: CVTableViewCell?
 	@IBOutlet var workSamplesCell: CVTableViewCell?
 	@IBOutlet var aboutMeCell: CVTableViewCell?
+	@IBOutlet var aboutAppCell: CVTableViewCell?
 	
 	private var cells: [CVTableViewCell?] = []
 	
@@ -35,7 +36,7 @@ class CVTableView: UIView, NibLoading {
 		self.tableView?.dataSource = self
 		self.tableView?.delegate = self
 		
-		self.cells = [self.educationCell, self.languagesCell, self.technologiesCell, self.workSamplesCell, self.aboutMeCell]
+		self.cells = [self.educationCell, self.languagesCell, self.technologiesCell, self.workSamplesCell, self.aboutMeCell, self.aboutAppCell]
 	}
 	
 	private func fill(with model: Applicant?) {
@@ -48,7 +49,7 @@ class CVTableView: UIView, NibLoading {
 extension CVTableView: UITableViewDataSource {
 	
 	func numberOfSections(in tableView: UITableView) -> Int {
-		return 5
+		return 6
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

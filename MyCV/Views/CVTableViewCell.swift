@@ -8,6 +8,17 @@
 
 import UIKit
 
+private let aboutAppBulletPoints = [
+	"MVC architecture",
+	"Services",
+	"JSON parsing + Decodable",
+	"Custom Views",
+	"Data caching",
+	"Image downsampling for reduced memory footprint",
+	"Custom Operators",
+	"Dynamic Type"
+]
+
 class CVTableViewCell: UITableViewCell, NibLoading {
 	
 	@IBOutlet var containerView: UIView?
@@ -63,6 +74,9 @@ class CVTableViewCell: UITableViewCell, NibLoading {
 			
 		case "about me":
 			output = self.model?.aboutInfo
+			
+		case "about app":
+			output = aboutAppBulletPoints
 			
 		default:
 			return nil
